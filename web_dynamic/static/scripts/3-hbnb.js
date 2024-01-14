@@ -3,7 +3,7 @@ $(document).ready(function () {
   const $amenitiesCheck = $('input[type=checkbox]');
   const $selectedAmenities = $('div.amenities h4');
   const $statusIndicator = $('div#api_status');
-  const placesApiUrl = 'http://0.0.0.0:5001/api/v1/places_search/';
+  const placesApiUrl = 'http://127.0.0.1:5001/api/v1/places_search/';
   const $placesSection = $('section.places');
 
   $amenitiesCheck.click(function () {
@@ -17,7 +17,7 @@ $(document).ready(function () {
   });
 
   // get status of API
-  $.getJSON('http://0.0.0.0:5001/api/v1/status/', function (data) {
+  $.getJSON('http://127.0.0.1:5001/api/v1/status/', function (data) {
     if (data.status === 'OK') {
       $statusIndicator.addClass('available');
 
